@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Projekt: Klima Steuerung</title>
-        <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
-    </head>
-    <body>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ url_for('static', filename='images/bootstrap-logo.svg') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                    Projekt: Klima Steuerung
-                </a>
-            </div>
-        </nav>
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    {% include "navbar.html" %}
 
-        <div class="container text-center" style="padding-top: 15px;">
-            <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            Datum u. Uhrzeit: 01.01.2024 - 00:00
-                        </div>
+    <div class="container text-center" style="padding-top: 15px;">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        Datum u. Uhrzeit: 01.01.2024 - 00:00
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            Temperatur: 20,00 °C
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        Temperatur: 20,00 °C
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            Lüftergeschwindigkeit: 1000 RPM
-                        </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        Lüftergeschwindigkeit: 1000 RPM
                     </div>
                 </div>
             </div>
         </div>
-
-        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    </body>
-</html>
+    </div>
+{% endblock %}
