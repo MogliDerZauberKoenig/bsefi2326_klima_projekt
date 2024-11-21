@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projekt: Klima Steuerung</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/bootstrap.min.css') }}">
+    </head>
+    <body>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{{ url_for('static', filename='images/bootstrap-logo.svg') }}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Projekt: Klima Steuerung
+                </a>
+            </div>
+        </nav>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    </body>
+</html>
