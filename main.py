@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
+def page_index():
     return render_template("index.html")
 
 @app.route("/history")
