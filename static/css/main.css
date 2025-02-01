@@ -1,0 +1,51 @@
+.surface {
+    background-color:var(--md-sys-color-surface);
+    color:var(--md-sys-color-on-surface);
+    position:relative;
+    padding:1rem;
+    border-radius:1rem
+}
+
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  overflow-y: auto;
+}
+#leftbar {
+  position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--leftbar-width, 5rem);
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+    background-color: transparent;
+    color: var(--md-sys-color-on-surface);
+    --md-elevation-level: 1;
+    &:empty {
+        transform: translateX(-100%);   
+    }
+    .bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    md-divider {
+        margin: 0.5rem;
+        width: 4rem;
+    }
+}
+
+md-icon {
+  overflow: visible;
+}
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
+  }
+}
