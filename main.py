@@ -4,30 +4,19 @@ import os
 
 app = Flask(__name__)
 
-# @app.route("/")
-# def hello_world():
-#     return render_template("index.html")
+return render_template("history.html")
 
-# @app.route("/history")
-# def page_history():
-#     return render_template("history.html")
-
-def get_file(filename):  # pragma: no cover
+def get_file(filename):  
     try:
         src = os.path.join(root_dir(), filename)
-        # Figure out how flask returns static files
-        # Tried:
-        # - render_template
-        # - send_file
-        # This should not be so non-obvious
         return open(src).read()
     except IOError as exc:
         return str(exc)
-def root_dir():  # pragma: no cover
+def root_dir():  
     return os.path.abspath(os.path.dirname(__file__))+'/static' 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
-def get_resource(path):  # pragma: no cover
+def get_resource(path):  
     if path  == '':
         path = 'index.html'
     mimetypes = {
@@ -45,4 +34,4 @@ def get_resource(path):  # pragma: no cover
     return Response(content, mimetype=mimetype)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8000)
+    app.run(debug=True, host="0.0.0.0", port=8000)1
