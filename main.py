@@ -34,4 +34,4 @@ def get_resource(path):
     return Response(content, mimetype=mimetype)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8000)1
+    app.run(debug=True, host="0.0.0.0", port=8000)
