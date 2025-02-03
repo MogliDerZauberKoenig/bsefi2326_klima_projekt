@@ -4,8 +4,6 @@ import os
 
 app = Flask(__name__)
 
-return render_template("history.html")
-
 def get_file(filename):  
     try:
         src = os.path.join(root_dir(), filename)
