@@ -1,9 +1,10 @@
 from flask import Flask, Response, send_file
+from flask_cors import CORS
 import random
 import os
 
 app = Flask(__name__)
-
+CORS(app) 
 def get_file(filename):  
     try:
         src = os.path.join(root_dir(), filename)
